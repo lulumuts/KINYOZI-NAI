@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { HttpClient } from '@angular/common/http'
 import { Hero } from '../hero';
 import { HairService } from '../hair.service';
 
@@ -11,23 +11,21 @@ import { HairService } from '../hair.service';
 })
 export class HairComponent implements OnInit {
 
-  selectedHero: Hero;
+  // selectedHero: Hero;
 
   heroes: Hero[];
-
 
   constructor(private hairService: HairService) { }
 
   ngOnInit() {
-    this.getHeroes();
-  }
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-  }
 
-  getHeroes(): void {
-    this.hairService.getHeroes()
-        .subscribe(heroes => this.heroes = heroes);
+    this.getHeroes();
+
+    getHeroes(): void {
+      this.hairService.getHeroes()
+          .subscribe(heroes => this.heroes = heroes);
+      }
+
   }
 
 }
