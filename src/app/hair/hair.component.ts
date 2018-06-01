@@ -1,24 +1,33 @@
 import { Component, OnInit } from '@angular/core';
-
+import { HttpClient } from '@angular/common/http'
 import { Hero } from '../hero';
-import { HairService } from '../hair.service';
-
+import { HairService } from '../hair.service'
+import { ApiRequestService } from '../api-http/api-request.service'
+import { Mane } from '../mane';
 
 @Component({
   selector: 'app-hair',
   templateUrl: './hair.component.html',
+  providers:[HairService,ApiRequestService],
   styleUrls: ['./hair.component.css']
 })
 export class HairComponent implements OnInit {
 
-  selectedHero: Hero;
+selectedHero: Hero;
 
-  heroes: Hero[];
+heroes: Hero[];
+
+mane:Mane;
 
 
-  constructor(private hairService: HairService) { }
+  constructor(private hairService: HairService,private apiService: ApiRequestService) { }
 
   ngOnInit() {
+
+    this.apiService.apiRequest()
+    this.mane=this.apiService.mane
+    console.log(this.mane)
+    
     this.getHeroes();
   }
   onSelect(hero: Hero): void {
@@ -30,4 +39,4 @@ export class HairComponent implements OnInit {
         .subscribe(heroes => this.heroes = heroes);
   }
 
-}
+  }

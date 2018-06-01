@@ -1,0 +1,9 @@
+{
+    "/api/*" : {
+        "target" : "https://kinyozi.herokuapp.com",
+        "secure" : false,
+        "logLevel" : "debug",
+        "changeOrigin": true,
+        "pathRewrite" : {"^/api" : ""},
+    }
+}
