@@ -8,7 +8,11 @@ import { HairDetailComponent } from './hair-detail/hair-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
+<<<<<<< HEAD
 import  { HttpClientModule } from '@angular/common/http';
+=======
+import { HttpClientModule } from '@angular/common/http'
+>>>>>>> 783dad3dbfaa7cfb1ea5d1fc299408002a733298
 
 
 @NgModule({
@@ -23,7 +27,11 @@ import  { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+<<<<<<< HEAD
     HttpClientModule,
+=======
+    HttpClientModule
+>>>>>>> 783dad3dbfaa7cfb1ea5d1fc299408002a733298
 
   ],
   providers: [],

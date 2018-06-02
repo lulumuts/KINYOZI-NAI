@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxyconfig.json",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
@@ -24,8 +24,12 @@
     "angular-in-memory-web-api": "^0.6.0",
     "bootstrap": "^4.1.1",
     "core-js": "^2.4.1",
+<<<<<<< HEAD
     "jquery": "^1.9.1",
     "popper.js": "^1.14.3",
+=======
+    "cors": "^2.8.4",
+>>>>>>> 783dad3dbfaa7cfb1ea5d1fc299408002a733298
     "rxjs": "^6.2.0",
     "zone.js": "^0.8.26"
   },
