@@ -6,16 +6,21 @@
     <span class="badge">{{hero.id}}</span> {{hero.name}}
   </li>
 </ul>
-<div class="container">
 
-    <div class="row">
-        <blockquote class="text-center text-lg">
-            <p>{{mane.photo}}</p>
-            <footer><cite>{{mane.name}}</cite></footer>
-        </blockquote>
-    </div>
 
+
+<div ng-repeat="mane in manes">
+  <ul>
+    <li>{{manes.id}}</li>
+    <li>{{mane.name}}</li>
+  </ul>
 </div>
+
+
+
+
+
+
 <!-- <div *ngIf="selectedHero">
   <h2>{{ selectedHero.name | uppercase }}Details</h2>
   <div><span>id: </span>{{selectedHero.id}}</div>

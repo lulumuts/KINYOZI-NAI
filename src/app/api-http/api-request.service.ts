@@ -9,23 +9,25 @@ import { Mane } from '../mane'
 export class ApiRequestService {
 
     mane:Mane;
+    manes:Mane[];
 
   constructor(private http: HttpClient) {
-    this.mane=new Mane(0,"","");
+    this.mane=new Mane(0,"","",0,0,0);
   }
   apiRequest(){
     interface ApiResponse{
       id:any;
       photo:any;
       name:any;
+      style:any;
+      location:any;
+      cost:any;
   }
   let promise =new Promise((resolve,reject)=>{
-      this.http.get<ApiResponse>(environment.apiUrl).toPromise().then(response=>{
+          this.http.get<ApiResponse[]>(environment.apiUrl).toPromise().then(response=>{
+          console.log(response)
 
-           this.mane.id=response.id
-           this.mane.photo=response.photo
-           this.mane.name=response.name
-           console.log(this.mane.photo)
+
            resolve()
 
       },
@@ -39,7 +41,8 @@ export class ApiRequestService {
       )
     })
     return promise
-    
+
+
 
   }
 }

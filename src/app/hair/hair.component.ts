@@ -19,16 +19,21 @@ heroes: Hero[];
 
 mane:Mane;
 
+manes: Mane[]=[];
 
-  constructor(private hairService: HairService,private apiService: ApiRequestService) { }
+  constructor(private hairService: HairService,private apiService: ApiRequestService) {}
+
+
 
   ngOnInit() {
+
+
+    this.getHeroes();
 
     this.apiService.apiRequest()
     this.mane=this.apiService.mane
     console.log(this.mane)
-    
-    this.getHeroes();
+
   }
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
@@ -37,6 +42,19 @@ mane:Mane;
   getHeroes(): void {
     this.hairService.getHeroes()
         .subscribe(heroes => this.heroes = heroes);
-  }
 
   }
+  apiRequest(): void {
+     this.apiService.apiRequest()
+      .subscribe(manes => {
+        this.parseData(manes);
+      });
+   }
+
+  parseData(jsonData: string) {
+  //considering you get your data in json arrays
+  for (let i = 0; i < jsonData[1].length; i++) {
+       const manes = new apiRequest(jsonData[1][i], jsonData[2][i]);
+       this.apiRequest.push(manes);
+  }
+}
