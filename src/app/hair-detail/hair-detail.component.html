@@ -2,22 +2,28 @@
 
 <div *ngIf="hero" class="title">
 
-  <img src="{{hero.image}}" id="main">
-
-<div class="container">
 <h2>Portfolio</h2>
-  <img src="{{hero.style1}}" class="photo">
-  <img src="{{hero.style2}}" class="photo">
-  <img src="{{hero.style3}}" class="photo">
+<div class="container-fluid" id=photos>
+  <img src="{{hero.style1}}" class="third">
+  <img src="{{hero.style2}}" class="third" >
+  <img src="{{hero.style3}}" class="third" >
+  <img src="{{hero.style4}}" class="third" >
+  <img src="{{hero.style5}}" class="third" >
 </div>
 
-<div class="section">
+<div class="container-fluid" id=bio>
+    <img src="{{hero.image}}" id="main">
   <p class="bio" id="name">{{hero.name | uppercase}}</p>
-  <p class="bio">Style: {{hero.style}}</p>
+  <p class="bio" id="style">Style: {{hero.style}}</p>
   <p class="bio">Location: {{hero.location}}</p>
 </div>
-<button type="button" class="btn btn-dark" (click)="goBack()">BACK</button>
+
+
 </div>
+
+<h4>Book here with {{hero.name}}</h4>
+<app-hair-form (addMane)="addnewMane($event)"></app-hair-form>
+<button type="button" class="btn btn-dark" (click)="goBack()">BACK</button>
 
   <!-- <div>
     <label>name:

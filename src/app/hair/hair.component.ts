@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Hero } from '../hero';
 import { HairService } from '../hair.service'
-import { ApiRequestService } from '../api-http/api-request.service'
-import { Mane } from '../mane';
+
+
 
 @Component({
   selector: 'app-hair',
   templateUrl: './hair.component.html',
-  providers:[HairService,ApiRequestService],
+  providers:[],
   styleUrls: ['./hair.component.css']
 })
 export class HairComponent implements OnInit {
@@ -19,7 +19,7 @@ heroes: Hero[];
 
 
 
-  constructor(private hairService: HairService,private apiService: ApiRequestService) {}
+  constructor(private hairService: HairService) {}
 
 
   ngOnInit() {
