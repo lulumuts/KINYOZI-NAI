@@ -27,8 +27,10 @@ export class ApiRequestService {
           this.http.get<ApiResponse[]>(environment.apiUrl).toPromise().then(response=>{
           console.log(response)
 
-
+          console.log("are you working",this.mane.id)
            resolve()
+
+
 
       },
       error=>{
@@ -41,6 +43,7 @@ export class ApiRequestService {
       )
     })
     return promise
+
 
 
 
