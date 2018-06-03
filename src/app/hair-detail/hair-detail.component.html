@@ -1,6 +1,7 @@
+
+
 <div *ngIf="hero" class="title">
-  <h2>{{ hero.name | uppercase }}</h2>
-  
+
   <img src="{{hero.image}}" id="main">
 
 <div class="container">
@@ -9,7 +10,15 @@
   <img src="{{hero.style2}}" class="photo">
   <img src="{{hero.style3}}" class="photo">
 </div>
+
+<div class="section">
+  <p class="bio" id="name">{{hero.name | uppercase}}</p>
+  <p class="bio">Style: {{hero.style}}</p>
+  <p class="bio">Location: {{hero.location}}</p>
 </div>
+<button type="button" class="btn btn-dark" (click)="goBack()">BACK</button>
+</div>
+
   <!-- <div>
     <label>name:
       <input [(ngModel)]="hero.name" placeholder="name"/>

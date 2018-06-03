@@ -8,7 +8,31 @@
 }
 .title{
   margin-left: -40vw;
+  font-family: 'Cabin Sketch', cursive;
 }
 .container{
   margin-left: 45vw;
+}
+button{
+  margin-top:5vh;
+}
+.section{
+  background-color: white;
+  margin-top:-90vh;
+  margin-right: 10vw;
+  text-align:left;
+  float:right;
+  width:40%;
+  height:34vh;
+  font-family: 'Quicksand', sans-serif;
+
+}
+.bio{
+  margin-left: 8vw;
+  margin-top:3vh;
+  font-family: 'Quicksand', sans-serif;
+}
+#name{
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 7vh;
 }

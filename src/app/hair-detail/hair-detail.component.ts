@@ -26,5 +26,8 @@ export class HairDetailComponent implements OnInit {
     this.hairService.getHero(id)
       .subscribe(hero => this.hero = hero);
   }
+  goBack(): void {
+  this.location.back();
+}
 
 }
