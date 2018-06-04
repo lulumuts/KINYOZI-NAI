@@ -1,0 +1,26 @@
+title{
+  background-color: black;
+
+}
+h1{
+  font-family: 'Cabin Sketch', cursive;
+  color:lightgrey;
+  font-size: 850%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+img{
+  opacity:0.6
+}
+nav{
+  margin-top: -20vh;
+  font-family: 'Cabin Sketch', cursive;
+  color:white;
+  font-size: 170%;
+}
+a{
+  color:grey;
+}
+body{
+  background: url('/assets/img/hair.jpg')no-repeat center center fixed;
+}

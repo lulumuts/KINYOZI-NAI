@@ -8,11 +8,22 @@ import { HairDetailComponent } from './hair-detail/hair-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
-<<<<<<< HEAD
-import  { HttpClientModule } from '@angular/common/http';
-=======
-import { HttpClientModule } from '@angular/common/http'
->>>>>>> 783dad3dbfaa7cfb1ea5d1fc299408002a733298
+import { HttpClientModule } from '@angular/common/http';
+import { HairFormComponent } from './hair-form/hair-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatInputModule } from '@angular/material/input';
+import {MatSelectModule } from '@angular/material/select';
+import {MatCheckboxModule } from '@angular/material/checkbox';
+import {MatButtonModule } from '@angular/material/button';
+import {MatChipsModule } from '@angular/material/chips'
+import {MatDatepickerModule } from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material';
+import {ReactiveFormsModule } from '@angular/forms';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { environment} from 'environments/environment';
 
 
 @NgModule({
@@ -21,17 +32,29 @@ import { HttpClientModule } from '@angular/common/http'
     HairComponent,
     HairDetailComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    HairFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-<<<<<<< HEAD
+
     HttpClientModule,
-=======
-    HttpClientModule
->>>>>>> 783dad3dbfaa7cfb1ea5d1fc299408002a733298
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    AngularFirestoreModule.enablePersistence(),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
+
+
 
   ],
   providers: [],

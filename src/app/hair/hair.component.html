@@ -1,4 +1,4 @@
-<h2>My Heroes</h2>
+
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
     <a routerLink="/detail/{{hero.id}}">
@@ -6,10 +6,16 @@
   </a>
   </li>
 </ul>
+<div class="details">
+<div *ngIf="hero">
+  <h2>{{ hero.name | uppercase }}Details</h2>
 
-<div class="row">
-     <blockquote class="text-center text-lg">
-         <p>{{api.id}}</p>
-         <footer><cite>{{api.name}}</cite></footer>
-     </blockquote>
- </div>
+</div>
+<div *ngIf="hero">
+  <h2>{{ hero.name | uppercase }}Details</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+
+</div>
+
+<img src='/assets/img/hair.jpg' id="background">
+  <app-hair-detail [hero]='selectedHero'></app-hair-detail>

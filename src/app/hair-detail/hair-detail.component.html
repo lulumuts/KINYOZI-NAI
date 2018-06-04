@@ -1,10 +1,38 @@
-<div *ngIf="hero">
-  <h2>{{ hero.name | uppercase }}Details</h2>
-  <div><span>id: </span>{{hero.id}}</div>
-  <div>
+
+
+<div *ngIf="hero" class="title">
+
+<h2>Portfolio</h2>
+<div class="container-fluid" id=photos>
+  <img src="{{hero.style1}}" class="third">
+  <img src="{{hero.style2}}" class="third" >
+  <img src="{{hero.style3}}" class="third" >
+  <img src="{{hero.style4}}" class="third" >
+  <img src="{{hero.style5}}" class="third" >
+</div>
+
+<div class="container-fluid" id=bio>
+    <img src="{{hero.image}}" id="main">
+  <p class="bio" id="name">{{hero.name | uppercase}}</p>
+  <p class="bio" id="style">Style: {{hero.style}}</p>
+  <p class="bio">Location: {{hero.location}}</p>
+</div>
+
+
+</div>
+
+<h4>Book here with {{hero.name}}</h4>
+<app-hair-form (addMane)="addnewMane($event)"></app-hair-form>
+<button type="button" class="btn btn-dark" (click)="goBack()">BACK</button>
+
+  <!-- <div>
     <label>name:
       <input [(ngModel)]="hero.name" placeholder="name"/>
     </label>
+<<<<<<< HEAD
   </div>
   <button (click)="goBack()">go back</button>
 </div>
+=======
+  </div> -->
+>>>>>>> 424d63719f976c5818997ec0f6b875664e507558

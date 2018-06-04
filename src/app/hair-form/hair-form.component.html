@@ -1,0 +1,25 @@
+<form [formGroup]="myForm" [hidden]="success" (ngSubmit)="submitHandler()">
+    <hr>
+
+    <mat-form-field>
+        <input matInput placeholder="email" formControlName="email" [(ngModel)]="newMane.email">
+    </mat-form-field>
+
+    <mat-form-field>
+        <textarea matInput placeholder="your message..." formControlName="message" [(ngModel)]="newMane.message"></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+
+    <button mat-button color="primary" type="submit" [disabled]="myForm.invalid">Submit Form</button>
+
+</form>
+
+<div *ngIf="success" class="notification is-success">
+    Yay! We received your submission
+</div>

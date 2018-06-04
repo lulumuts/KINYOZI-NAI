@@ -33,11 +33,19 @@ h4 {
   color: #eee;
   max-height: 120px;
   min-width: 120px;
+<<<<<<< HEAD
   background-color: #607D8B;
   border-radius: 2px;
 }
 .module:hover {
   background-color: #EEE;
+=======
+
+  border-radius: 2px;
+}
+.module:hover {
+
+>>>>>>> 424d63719f976c5818997ec0f6b875664e507558
   cursor: pointer;
   color: #607d8b;
 }
@@ -47,6 +55,25 @@ h4 {
 .grid-pad > [class*='col-']:last-of-type {
   padding-right: 20px;
 }
+<<<<<<< HEAD
+=======
+img{
+  height:40vh;
+  width:17vw;
+  border-radius:13em;
+}
+h3{
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 10vh;
+}
+p {
+  margin-top: 4vh;
+  color:black;
+  margin-bottom: 5vh;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 2em;
+}
+>>>>>>> 424d63719f976c5818997ec0f6b875664e507558
 @media (max-width: 600px) {
   .module {
     font-size: 10px;
