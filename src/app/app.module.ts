@@ -51,7 +51,6 @@ import { environment} from 'environments/environment';
     MatChipsModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule.enablePersistence(),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
