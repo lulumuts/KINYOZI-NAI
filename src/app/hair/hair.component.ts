@@ -15,6 +15,8 @@ export class HairComponent implements OnInit {
 
 selectedHero: Hero;
 
+hero:Hero;
+
 heroes: Hero[];
 
 

@@ -12,14 +12,12 @@ import { Mane } from '../mane';
   styleUrls: ['./hair-detail.component.css']
 })
 export class HairDetailComponent implements OnInit {
-  newMane=new Mane(0,"","");
+
 
   @Input() hero: Hero;
-  @Output() addMane=new EventEmitter<Mane>();
 
-  submitHandler(){
-    this.addMane.emit(this.newMane);
-  }
+
+
 
   constructor(private route: ActivatedRoute, private hairService: HairService, private location: Location) { }
 
