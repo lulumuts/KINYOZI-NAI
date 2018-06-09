@@ -19,7 +19,7 @@ hero:Hero;
 
 heroes: Hero[];
 
-hero:Hero;
+
 
 
   constructor(private hairService: HairService) {}

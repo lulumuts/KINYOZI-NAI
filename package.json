@@ -30,11 +30,10 @@
     "cors": "^2.8.4",
     "firebase": "^5.0.4",
     "jquery": "^3.3.1",
-<<<<<<< HEAD
+
     "js-polyfills": "^0.1.42",
-=======
     "ng-http-loader": "^2.2.0",
->>>>>>> ab40043833e6aa9c1f0821239948a2c6cb58849a
+
     "popper.js": "^1.14.3",
     "rxjs": "^6.2.0",
     "zone.js": "^0.8.26"
