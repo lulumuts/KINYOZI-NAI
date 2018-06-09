@@ -1,12 +1,13 @@
-<form [formGroup]="myForm" [hidden]="success" (ngSubmit)="submitHandler()">
+<form [formGroup]="heroForm">
+  <div class="form-group">
     <hr>
 
     <mat-form-field>
-        <input matInput placeholder="email" formControlName="email" [(ngModel)]="newMane.email">
+        <input matInput placeholder="email" formControlName="email">
     </mat-form-field>
 
     <mat-form-field>
-        <textarea matInput placeholder="your message..." formControlName="message" [(ngModel)]="newMane.message"></textarea>
+        <textarea matInput placeholder="your message..." formControlName="message" ></textarea>
     </mat-form-field>
 
     <mat-form-field>
@@ -15,11 +16,10 @@
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
 
-
-    <button mat-button color="primary" type="submit" [disabled]="myForm.invalid">Submit Form</button>
-
+    <button mat-button color="primary" type="submit">Submit Form</button>
+</div>
 </form>
 
-<div *ngIf="success" class="notification is-success">
+<div class="notification is-success">
     Yay! We received your submission
 </div>

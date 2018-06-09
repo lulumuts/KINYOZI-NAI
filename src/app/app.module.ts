@@ -19,11 +19,9 @@ import {MatChipsModule } from '@angular/material/chips'
 import {MatDatepickerModule } from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material';
 import {ReactiveFormsModule } from '@angular/forms';
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireAuthModule } from 'angularfire2/auth';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment} from 'environments/environment';
+import { NgHttpLoaderModule } from 'ng-http-loader';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 
 
@@ -35,13 +33,15 @@ import { environment} from 'environments/environment';
     HairDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    HairFormComponent
+    HairFormComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    NgHttpLoaderModule, 
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MatInputModule,
@@ -51,9 +51,7 @@ import { environment} from 'environments/environment';
     MatChipsModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    AngularFirestoreModule.enablePersistence(),
-    AngularFireAuthModule,
-    AngularFireDatabaseModule,
+
 
 
 

@@ -3,7 +3,10 @@ import { Hero } from '../hero';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { HairService }  from '../hair.service';
+import { StylistService } from '../style/stylist.service';
+import { ApiRequestService } from '../api-http/api-request.service'
 import { Mane } from '../mane';
+
 
 
 @Component({
@@ -12,27 +15,36 @@ import { Mane } from '../mane';
   styleUrls: ['./hair-detail.component.css']
 })
 export class HairDetailComponent implements OnInit {
-  newMane=new Mane(0,"","");
-  
-  @Input() hero: Hero;
-  @Output() addMane=new EventEmitter<Mane>();
+
+  hero:Hero;
+  newMane=new Mane(0,"",0);
+
+  mane:Mane;
+
+  manes:Mane[]=[];
+
 
   submitHandler(){
-    this.addMane.emit(this.newMane);
+
   }
 
-  constructor(private route: ActivatedRoute, private hairService: HairService, private location: Location) { }
+  constructor(private route: ActivatedRoute, private hairService: HairService, private location: Location,private stylistService: StylistService) { }
 
   ngOnInit(): void {
     this.getHero();
 
+
   }
+
 
   getHero(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.hairService.getHero(id)
       .subscribe(hero => this.hero = hero);
+
   }
+
+
 
   goBack(): void {
   this.location.back();
