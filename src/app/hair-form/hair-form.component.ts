@@ -1,7 +1,6 @@
 import { Component, OnInit,Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl,Validators } from '@angular/forms'
-import { AngularFirestore } from 'angularfire2/firestore';
-import { FirebaseService } from '../fire/firebase.service';
+
 import { Mane } from '../mane';
 import { tap, first } from 'rxjs/operators'
 
@@ -12,13 +11,18 @@ import { tap, first } from 'rxjs/operators'
 })
 export class HairFormComponent implements OnInit {
 
+  heroForm:FormGroup;
 
 
-
-  constructor(private fireService: FirebaseService, private fb: FormBuilder, private afs: AngularFirestore) {
-
+  constructor(private fb: FormBuilder) {
+    this.createForm();
   }
-
+  createForm(){
+    this.heroForm=this.fb.group({
+      email:['', Validators.required],
+      message: '',
+    });
+  }
   ngOnInit() {
 
   }

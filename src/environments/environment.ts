@@ -5,12 +5,5 @@
 
 export const environment = {
   production: true,
-  firebase: {
-  apiKey: "AIzaSyBwRcGrdk180e2zdJljX-92DqL7ucxSqzs",
-  authDomain: "kinyozi-bd6cf.firebaseapp.com",
-  databaseURL: "https://kinyozi-bd6cf.firebaseio.com",
-  projectId: "kinyozi-bd6cf",
-  storageBucket: "kinyozi-bd6cf.appspot.com",
-  messagingSenderId: "884671965378"
-}
+  apiUrl:"https://kinyozi.herokuapp.com/api/port/?format=json"
 };

@@ -1,22 +1,29 @@
 title{
-  background-color: black;
+  background-color: white;
 
 }
 h1{
   font-family: 'Cabin Sketch', cursive;
-  color:lightgrey;
-  font-size: 850%;
-  margin-top: 10%;
+  color:black;
+  font-size: 950%;
+  margin-top: -90vh;
+  text-align: left;
+  margin-left: 10vw;
   margin-bottom: 10%;
 }
 img{
-  opacity:0.6
+  opacity:0.8;
+  margin-top:-59vh;
+  width:100%;
+  margin-bottom: 20vh;
 }
 nav{
-  margin-top: -20vh;
+  margin-top: 50vh;
   font-family: 'Cabin Sketch', cursive;
-  color:white;
+  color:black;
   font-size: 170%;
+
+
 }
 a{
   color:grey;
