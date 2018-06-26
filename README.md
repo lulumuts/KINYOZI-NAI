@@ -1,27 +1,18 @@
-# Kinyozi
+  # KINYOZI
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
+  #### Kinyozi is an application that allows you to find stylists that specialize in your specific hairstyle, and view their respective portfolio's and allows you to book an appointment with her. 26/05/2018
 
-## Development server
+  #### By Lulu Mutuli
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+  ## Kinyozi acts as the front-end web interface to display a django made API, for all the portfolio images and styles and stylists. The API allows for a database that can continue to grow, it is also one of the few ways that an angular frontend can interact with a django backend.
 
-## Code scaffolding
+  ## Set up includes the calling of the API so as to allow it to display on angular. You need to include services for this task. It could be much clearer to have a separate service for each API.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+  ## No known bugs except for making a POST request using the API.
 
-## Build
+  ## Technologies Used were Angular 6, MD Bootstrap, Django.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+  ## If you have any questions, feel free to contact me at lulumutuli24@gmail.com, and if there are any changes you feel may make this app better, please feel free to contribute solutions!
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+  ### License
+  Copyright (c) 2018 Lulu Mutuli
